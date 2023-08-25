@@ -14,6 +14,7 @@ This application is aimed to display my skills and its application on topics
 -Regular Expression
 -DBMS application
 -DBMS queries and server capabilities
+-Python module mysql.connect and sqlite3
 -Python GUI
 -Special expertise in modules like os,shutle,subprocess,Cv2,CustomTkinter,etc.
 This is my second year project to be considered as a proof of my skills for grading,internship,placement and as a proof of merit.
@@ -44,6 +45,8 @@ Files and Directories:
 	-app data:
 		- Database:
 			-(stuff related to database and mysql)
+
+			-databasecreatelite.py=(code to create sqlite3 userinfo.db)
 		-Dependencies:
 			-harrcascade_frontalface_default.xml.=(it is the face recognition algorithm i am using)
 
@@ -73,6 +76,10 @@ Files and Directories:
 
 	-Registration.py=(It has code for gui and Registration functionality)
 
+	-sqlite3conn.py=(It has code to interract with sqlite3 database directly)
+
+	-userinfo.db=(It is the databse i am using in place of mysql and it uses sqlite3)
+
 	-VideoFaceRecogniton.py=(Contains code for gui and Video based face recognition)
 
 	-WebcamFaceRecogniton.py=(Contains code for gui and Webcam based face recognition)
@@ -81,11 +88,13 @@ Files and Directories:
 
 Database Structure:
 -------------------
---Database Details: 
+--Database Details:
 	-Name:userinfo
-	-Host: localhost
-	-Username: root
-	-Password: root
+	-If using mysql.connect
+		-Host: localhost
+		-Username: root
+		-Password: root
+	-if using sqlite3 no need of user credentials
 	-Tables:"userlogin","userpersonal","usercontact"
 
 --Table Details: userlogin
@@ -137,6 +146,7 @@ PYTHON MODULES:
 	-os
 	-shutil
 	-importlib
+	-sqlite3
 ALGORITHM:
 	-harrcascade_frontalface_default.xml
 	-details:
