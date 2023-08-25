@@ -4,6 +4,7 @@ import tkinter as tk
 import re
 import mysql.connector
 import subprocess
+import sqlite3
 
 
 
@@ -20,17 +21,12 @@ def submit_login_details(username,password):
     global_username=username
     try:
         # Establish a connection to the database
-        connection = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            passwd="root",
-            database="userinfo"
-        )
+        connection =  sqlite3.connect("userinfo.db")
 
         # Create a cursor object to execute SQL queries
         cursor = connection.cursor()
         # Define the INSERT query
-        insert_query = "INSERT INTO userlogin (username, password) VALUES (%s, %s)"
+        insert_query = "INSERT INTO userlogin (username, password) VALUES (?,?)"
 
         # Execute the query with the provided values
         cursor.execute(insert_query, (username, password))
@@ -48,9 +44,9 @@ def submit_login_details(username,password):
             msg1.destroy()
 
 
-    except mysql.connector.Error as error:
+    except sqlite3.Error as error:
         # Handle any errors that occur during the process
-        msg2=CTkMessagebox(title="Error", message=f"Submission Unsuccesfully",icon="cancel", option_1="Ok")
+        msg2=CTkMessagebox(title="Error", message=error,icon="cancel", option_1="Ok")
         if msg2.get()=="Ok":
             msg2.destroy()
 
@@ -58,18 +54,13 @@ def submit_login_details(username,password):
 def submit_contact_details(email,mobileno,icc):
     try:
         # Establish a connection to the database
-        connection = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            passwd="root",
-            database="userinfo"
-        )
+        connection =  sqlite3.connect("userinfo.db")
         username=global_username
         # Create a cursor object to execute SQL queries
         cursor = connection.cursor()
 
         # Define the INSERT query
-        insert_query = "INSERT INTO usercontact (username,email, icc,mobileno ) VALUES (%s, %s, %s, %s)"
+        insert_query = "INSERT INTO usercontact (username,email, icc,mobileno ) VALUES (?,?,?,?)"
 
         # Execute the query with the provided values
         cursor.execute(insert_query, (username,email, icc,mobileno ))
@@ -87,7 +78,7 @@ def submit_contact_details(email,mobileno,icc):
             msg1.destroy()
 
 
-    except mysql.connector.Error as error:
+    except sqlite3.Error as error:
         print(error)
         # Handle any errors that occur during the process
         msg2=CTkMessagebox(title="Error", message=f"Submission Unsuccesfully",icon="cancel", option_1="Ok")
@@ -98,18 +89,13 @@ def submit_contact_details(email,mobileno,icc):
 def submit_personal_details(firstname,lastname,gender,dateofbirth,country,state,city):
     try:
         # Establish a connection to the database
-        connection = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            passwd="root",
-            database="userinfo"
-        )
+        connection =  sqlite3.connect("userinfo.db")
 
         # Create a cursor object to execute SQL queries
         cursor = connection.cursor()
         username=str(global_username)
         # Define the INSERT query
-        insert_query = "INSERT INTO userpersonal(username,firstname,lastname,gender,dateofbirth,country,state,city) VALUES (%s, %s, %s, %s, %s, %s, %s,%s)"
+        insert_query = "INSERT INTO userpersonal(username,firstname,lastname,gender,dateofbirth,country,state,city) VALUES (?, ?, ?, ?, ?, ?, ?,?)"
 
         # Execute the query with the provided values
         cursor.execute(insert_query, (username,firstname,lastname,gender,dateofbirth,country,state,city))
@@ -127,7 +113,7 @@ def submit_personal_details(firstname,lastname,gender,dateofbirth,country,state,
             msg1.destroy()
 
 
-    except mysql.connector.Error as error:
+    except sqlite3.Error as error:
         # Handle any errors that occur during the process
         print(error)
         msg2=CTkMessagebox(title="Error", message=f"Submission Unsuccesfully",icon="cancel", option_1="Ok")
@@ -138,18 +124,13 @@ def submit_personal_details(firstname,lastname,gender,dateofbirth,country,state,
 def submit_tandc_details(tandc_status):
     try:
         # Establish a connection to the database
-        connection = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            passwd="root",
-            database="userinfo"
-        )
+        connection =  sqlite3.connect("userinfo.db")
         username=global_username
         # Create a cursor object to execute SQL queries
         cursor = connection.cursor()
 
         # Define the UPDATE query
-        update_query = "UPDATE usercontact SET tandc_status=%s WHERE username=%s"
+        update_query = "UPDATE usercontact SET tandc_status=? WHERE username=?"
 
         # Execute the query with the provided values
         cursor.execute(update_query, (tandc_status,username))
@@ -166,7 +147,7 @@ def submit_tandc_details(tandc_status):
         if msg1.get()=="Ok":
             msg1.destroy()
 
-    except mysql.connector.Error as error:
+    except sqlite3.Error as error:
         # Handle any errors that occur during the process
         msg2=CTkMessagebox(title="Error", message=f"Submission Unsuccesfully",icon="cancel", option_1="Ok")
         if msg2.get()=="Ok":

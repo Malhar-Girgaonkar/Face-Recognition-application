@@ -3,6 +3,7 @@ import customtkinter as ctk
 import tkinter as tk
 import mysql.connector
 import subprocess
+import sqlite3
 
 
 
@@ -14,9 +15,9 @@ appWidth, appHeight = 400,300
 class MyFrameLogin(ctk.CTkFrame):
 
     def authenticate(self):
-        db=mysql.connector.connect(host="localhost",user="root",passwd="root",database="userinfo")
+        db=sqlite3.connect("userinfo.db")
         mycursor=db.cursor()
-        querry = "SELECT COUNT(*) FROM userlogin WHERE username = %s AND password = %s"
+        querry = "SELECT COUNT(*) FROM userlogin WHERE username = ? AND password = ?"
         values = (self.username,self.password)
         mycursor.execute(querry, values)
         result = mycursor.fetchone()
