@@ -6,6 +6,7 @@ required_modules = [
     "customtkinter",
     "tkinter",
     "mysql.connector",
+    "mysql"
     "PIL",
     "cv2",
     "os",
