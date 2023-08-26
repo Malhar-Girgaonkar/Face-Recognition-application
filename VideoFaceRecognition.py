@@ -17,7 +17,6 @@ class MyFramevidrecog(ctk.CTkFrame):
     def redirectmain(self):
         self.master.withdraw()
         subprocess.run(["Python","Mainpage.py"])
-        self.response.destroy()
         self.master.destroy()
 
     def selectvid(self):
