@@ -5,7 +5,7 @@ connection = sqlite3.connect("userinfo.db")
 cursor = connection.cursor()
 
 # CREATING TABLES
-#Dummy data is username=admin password=Admin@123
+#Dummy data is username=admin  password=Admin@123
 
 # CREATING USERLOGIN TABLE
 #cursor.execute("CREATE TABLE userlogin (username TEXT PRIMARY KEY, password TEXT)")
