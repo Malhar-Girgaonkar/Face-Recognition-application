@@ -8,7 +8,7 @@ required_modules = [
     "mysql.connector",
     "mysql"
     "PIL",
-    "cv2",
+    "opencv-python",
     "os",
     "shutil"
 ]
