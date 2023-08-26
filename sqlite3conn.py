@@ -5,6 +5,7 @@ connection = sqlite3.connect("userinfo.db")
 cursor = connection.cursor()
 
 # CREATING TABLES
+#Dummy data is username=admin password=Admin@123
 
 # CREATING USERLOGIN TABLE
 #cursor.execute("CREATE TABLE userlogin (username TEXT PRIMARY KEY, password TEXT)")
@@ -31,13 +32,22 @@ cursor = connection.cursor()
 #    print(x)
 
 # DELETING DATA IN USERLOGIN TABLE
-#cursor.execute("DELETE FROM userlogin")
+#cursor.execute("DELETE FROM userlogin WHERE username = ?", ("name_of_user",))
 
 # DELETING DATA IN USERPERSONAL TABLE
-#cursor.execute("DELETE FROM userpersonal")
+#cursor.execute("DELETE FROM userpersonal WHERE username = ?", ("name_of_user",))
 
 # DELETING DATA IN USERCONTACT TABLE
-#cursor.execute("DELETE FROM usercontact")
+#cursor.execute("DELETE FROM usercontact WHERE username = ?", ("name_of_user",))
+
+#DELETING ALL DATA IN USERLOGIN TABLE
+#cursor.execute("TRUNCATE TABLE userlogin")
+
+#DELETING ALL DATA IN USERLOGIN TABLE
+#cursor.execute("TRUNCATE TABLE userpersonal")
+
+#DELETING ALL DATA IN USERLOGIN TABLE
+#cursor.execute("TRUNCATE TABLE usercontact")
 
 # CHECKING TABLE DATA
 cursor.execute("SELECT * FROM userlogin")
@@ -45,5 +55,6 @@ for x in cursor:
     print(x)
 
 # Commit the changes and close the connection
+#If use user create,delete,truncate,update queries from above and want to save changes in database then uncomment below line
 #connection.commit()
 connection.close()

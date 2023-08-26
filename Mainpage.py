@@ -15,13 +15,11 @@ class Mybuttonframe(ctk.CTkFrame):
     def redirectimg(self):
         self.master.withdraw()
         subprocess.run(["Python","ImageFaceRecognition.py"])
-        self.response.destroy()
         self.master.destroy()
 
     def redirectvid(self):
         self.master.withdraw()
         subprocess.run(["Python","VideoFaceRecognition.py"])
-        self.response.destroy()
         self.master.destroy()
 
     def redirectwc(self):
