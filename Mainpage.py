@@ -3,6 +3,7 @@ import customtkinter as ctk
 import tkinter as tk
 from PIL import Image,ImageTk
 import subprocess
+import os
 
 
 
@@ -14,17 +15,29 @@ appWidth, appHeight = 562,405
 class Mybuttonframe(ctk.CTkFrame):
     def redirectimg(self):
         self.master.withdraw()
-        subprocess.run(["Python","ImageFaceRecognition.py"])
+        #finding current script directory
+        current_script_directory = os.path.dirname(os.path.realpath(__file__))
+        # Construct the relative path to Mainpage.py
+        image_face_recognition_path = os.path.join(current_script_directory, "ImageFaceRecognition.py")
+        subprocess.run(["Python",image_face_recognition_path])
         self.master.destroy()
 
     def redirectvid(self):
         self.master.withdraw()
-        subprocess.run(["Python","VideoFaceRecognition.py"])
+        #finding current script directory
+        current_script_directory = os.path.dirname(os.path.realpath(__file__))
+        # Construct the relative path to Mainpage.py
+        Video_face_recognition_path = os.path.join(current_script_directory, "VideoFaceRecognition.py")
+        subprocess.run(["Python",Video_face_recognition_path])
         self.master.destroy()
 
     def redirectwc(self):
         self.master.withdraw()
-        subprocess.run(["Python","WebcamFaceRecognition.py"])
+        #finding current script directory
+        current_script_directory = os.path.dirname(os.path.realpath(__file__))
+        # Construct the relative path to Mainpage.py
+        webcam_face_recognition_path = os.path.join(current_script_directory, "WebcamFaceRecognition.py")
+        subprocess.run(["Python",webcam_face_recognition_path])
         self.master.destroy()
 
 
@@ -48,13 +61,25 @@ class Mainpageapp(ctk.CTk):
     def optionmenu_callback(self,choice):
         if choice=="Registration":
             #open Registration.py
-            subprocess.run(["Python","Registration.py"])
+            #finding current script directory
+            current_script_directory = os.path.dirname(os.path.realpath(__file__))
+            # Construct the relative path to Mainpage.py
+            registration_path = os.path.join(current_script_directory, "Registration.py")
+            subprocess.run(["Python",registration_path])
         elif choice=="Login":
             #OPEN login.py
-            subprocess.run(["Python","Login.py"])
+            #finding current script directory
+            current_script_directory = os.path.dirname(os.path.realpath(__file__))
+            # Construct the relative path to Mainpage.py
+            login_path = os.path.join(current_script_directory, "Login.py")
+            subprocess.run(["Python",login_path])
         elif choice=="About App":
             #open Aboutapp.py
-            subprocess.run(["Python","Aboutapp.py"])
+            #finding current script directory
+            current_script_directory = os.path.dirname(os.path.realpath(__file__))
+            # Construct the relative path to Aboutapp.py
+            Aboutpage_path = os.path.join(current_script_directory, "Aboutapp.py")
+            subprocess.run(["Python",Aboutpage_path])
 
 
     def __init__(self, *args, **kwargs):

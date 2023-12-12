@@ -187,13 +187,9 @@ class MyFramelogin(ctk.CTkFrame):
             return False
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
-
-        
-
         #Label for login detail display
         self.label = ctk.CTkLabel(self,text="Login Details",font=("arial",15,"italic"))
         self.label.grid(row=0, column=0,columnspan=2, padx=20,pady=20,sticky="nswe")
-
         #label1 for username
         self.runame=ctk.CTkLabel(self, text="Username:",font=("arial",25,"italic"))
         self.runame.grid(row=1,column=0,padx=10,pady=10,sticky="nsew")
@@ -310,7 +306,7 @@ class MyFramepersonal(ctk.CTkFrame):
             #submit personal details to DBMS
             submit_personal_details(self.firstname,self.lastname,self.gender,self.dateofbirth,self.country,self.state,self.city)
             self.msg.destroy()
-        
+
 
 
 

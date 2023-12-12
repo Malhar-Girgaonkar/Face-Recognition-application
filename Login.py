@@ -4,6 +4,7 @@ import tkinter as tk
 import mysql.connector
 import subprocess
 import sqlite3
+import os
 
 
 
@@ -27,7 +28,11 @@ class MyFrameLogin(ctk.CTkFrame):
             if self.response.get()=="Next":
                 #go to Mainpage.py
                 self.master.withdraw()
-                subprocess.run(["Python","Mainpage.py"])
+                #finding current script directory
+                current_script_directory = os.path.dirname(os.path.realpath(__file__))
+                # Construct the relative path to Mainpage.py
+                mainpage_path = os.path.join(current_script_directory, "Mainpage.py")
+                subprocess.run(["Python",mainpage_path])
                 self.response.destroy()
                 self.master.destroy()
         else:
@@ -52,7 +57,12 @@ class MyFrameLogin(ctk.CTkFrame):
             self.response.destroy()
 
     def redirect(self):
-        subprocess.run(["Python","Registration.py"])
+        #finding current script directory
+        current_script_directory = os.path.dirname(os.path.realpath(__file__))
+        # Construct the relative path to Mainpage.py
+        registration_path = os.path.join(current_script_directory, "Registration.py")
+        print(registration_path)
+        subprocess.run(["Python",registration_path])
 
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
@@ -103,7 +113,11 @@ class loginapp(ctk.CTk):
         self.login_frame.grid(row=1, column=0,columnspan=1, padx=10, pady=10, sticky="nsew")
 
 
+"""def start():
+    if __name__=="__main__":
+        login_app=loginapp()
+        login_app.mainloop()"""
 
 if __name__=="__main__":
-    login_app=loginapp()
-    login_app.mainloop()
+        login_app=loginapp()
+        login_app.mainloop()

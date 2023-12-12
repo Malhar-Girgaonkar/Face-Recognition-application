@@ -88,6 +88,10 @@ Files and Directories:
 		-videos:
 			-(This directory contains videos that you will load to application to do action on) 
 
+	-Build:It is a floder created by pyinstaller during creation of exe file
+
+	-Dist:It is created by pyinstaller to store login.py file's executable version
+		-Login.exe=It is the login file's executable version
 
 	-Aboutapp.py=(Contains information about application)
 

@@ -42,6 +42,10 @@ class MyFrameimgrecog(ctk.CTkFrame):
             
     def facerecognition(self):
         #create face descriptor using harcascade algorithm
+        #current_script_directory = os.path.dirname(os.path.realpath(__file__))
+        # Construct the relative path to Mainpage.py
+        #harrcascade_path = os.path.join(current_script_directory, "haarcascade_frontalface_default.xml")
+        #relative path is 'app data\Dependencies\haarcascade_frontalface_default.xml'
         self.fd=cv2.CascadeClassifier('app data\Dependencies\haarcascade_frontalface_default.xml')
         #load image with given path
         self.image_location=self.img_path
@@ -59,7 +63,10 @@ class MyFrameimgrecog(ctk.CTkFrame):
 
     def redirectmain(self):
         self.master.withdraw()
-        subprocess.run(["Python","Mainpage.py"])
+        current_script_directory = os.path.dirname(os.path.realpath(__file__))
+        # Construct the relative path to Mainpage.py
+        mainpage_path = os.path.join(current_script_directory, "Mainpage.py")
+        subprocess.run(["Python",mainpage_path])
         self.master.destroy()
 
     def __init__(self, *args, **kwargs):

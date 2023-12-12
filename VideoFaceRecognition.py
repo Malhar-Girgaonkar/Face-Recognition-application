@@ -16,7 +16,11 @@ class MyFramevidrecog(ctk.CTkFrame):
 
     def redirectmain(self):
         self.master.withdraw()
-        subprocess.run(["Python","Mainpage.py"])
+        #finding current script directory
+        current_script_directory = os.path.dirname(os.path.realpath(__file__))
+        # Construct the relative path to Mainpage.py
+        mainpage_path = os.path.join(current_script_directory, "Mainpage.py")
+        subprocess.run(["Python",mainpage_path])
         self.master.destroy()
 
     def selectvid(self):
