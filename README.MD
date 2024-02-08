@@ -6,41 +6,65 @@ This Project made to help the users identify human face using OpenCC and harrcas
 - Image
 - Video
 - Webcam
+The application also provides the facility to print the bounding box region in terminal and also highlights it on the image , video , webcam footage.A person can login and register to the application and these details are stored in a database.For first time users we have code that helps install dependencies and create the database structure.
 
-## CNN Architecture
+## Database Structure:
  
-| Layer (type)                     | Output Shape          | Param   |
-| ---------------------------------|-----------------------|---------|
-| conv2d_81 (Conv2D)               | (None, 254, 254, 16)  | 448      |
-| max_pooling2d_45 (MaxPooling2D)   | (None, 128, 128, 16)  | 0       |
-| conv2d_82 (Conv2D)               | (None, 126, 126, 32)  | 4640    |
-| max_pooling2d_46 (MaxPooling2D)   | (None, 63, 63, 32)    | 0       |
-| conv2d_83 (Conv2D)               | (None, 61, 61, 64)    | 18496   |
-| conv2d_84 (Conv2D)               | (None, 59, 59, 64)    | 36928   |
-| max_pooling2d_47 (MaxPooling2D)   | (None, 29, 29, 64)    | 0       |
-| conv2d_85 (Conv2D)               | (None, 27, 27, 128)   | 73856   |
-| conv2d_86 (Conv2D)               | (None, 25, 25, 128)   | 147584  |
-| max_pooling2d_48 (MaxPooling2D)   | (None, 12, 12, 128)   | 0       |
-| conv2d_87 (Conv2D)               | (None, 10, 10, 256)   | 295168  |
-| conv2d_88 (Conv2D)               | (None, 8, 8, 256)     | 590080  |
-| conv2d_89 (Conv2D)               | (None, 6, 6, 256)     | 590080  |
-| max_pooling2d_49 (MaxPooling2D)   | (None, 3, 3, 256)     | 0       |
-| flatten_9 (Flatten)              | (None, 2304)          | 0       |
-| dense_27 (Dense)                  | (None, 512)           | 1180160 |
-| dense_28 (Dense)                  | (None, 512)           | 262656  |
-| dense_29 (Dense)                  | (None, 2)             | 2565    |
+- Database Details:
+	- Name:userinfo
+	- If using mysql.connect
+		- Host: localhost
+		- Username: root
+		- Password: root
+	- if using sqlite3 no need of user credentials
+	- Tables:"userlogin","userpersonal","usercontact"
+
+- Table Details: userlogin
+
+- Primary Key: username
+- Attributes:
+	- username (VARCHAR, 20)
+	- password (VARCHAR, 20)
+
+-Table Details: userpersonal
+
+- Primary Key: username
+- Foreign Key: username (references userlogin.username)
+- Attributes:
+	- username (VARCHAR, 20)
+	- firstname (CHAR, 20)
+	- lastname (CHAR, 20)
+	- gender (ENUM: 'Male', 'Female', 'Transgender', 'Others')
+	- dateofbirth (VARCHAR, 10)
+	- country (CHAR, 20)
+	- state (CHAR, 20)
+	- city (CHAR, 20)
+
+- able Details: usercontact
+
+- Primary Key: username
+- Foreign Key: username (references userlogin.username)
+- Attributes:
+	- username (VARCHAR, 20)
+	- email (VARCHAR, 40)
+	- icc (ENUM: '+91', '+1', '+44', '+81')
+	- mobileno (INT, 10)
+	- tandc_status (ENUM: 'on', 'off')
 
                                                                  
 
 ## Technological Stack
-- Python
-- TensorFlow and Keras (Machine Learning)
-- PIL (Python Imaging Library)
-- Numpy (Accelerated vector computing)
-- OpenCV (Computer vision)
-- OS (For os related interractions)
-- Shutil (For images copying and dataset creation)
-- Matplotlib (for graphical visualization)
+	- CTkMessagebox
+	- customtkinter (and its submodules)
+	- tkinter (and its submodules)
+	- mysql.connector
+	- subprocess
+	- PIL (Image, ImageTk)
+	- cv2 (OpenCV)
+	- os
+	- shutil
+	- importlib
+	- sqlite3
 
 ## Code functioning
 - First we create the dataset from data that we have in two folders for which we have code written in notebook.It splits data into folders as train and validation and each has two categories as AI or Human.
