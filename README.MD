@@ -20,38 +20,33 @@ The application also provides the facility to print the bounding box region in t
 	- Tables:"userlogin","userpersonal","usercontact"
 
 - Table Details: userlogin
-
-- Primary Key: username
-- Attributes:
-	- username (VARCHAR, 20)
-	- password (VARCHAR, 20)
+  - Primary Key: username
+  - Attributes:
+ 	  - username (VARCHAR, 20)
+	  - password (VARCHAR, 20)
 
 - Table Details: userpersonal
-
-- Primary Key: username
-- Foreign Key: username (references userlogin.username)
-- Attributes:
-	- username (VARCHAR, 20)
-	- firstname (CHAR, 20)
-	- lastname (CHAR, 20)
-	- gender (ENUM: 'Male', 'Female', 'Transgender', 'Others')
-	- dateofbirth (VARCHAR, 10)
-	- country (CHAR, 20)
-	- state (CHAR, 20)
-	- city (CHAR, 20)
+  - Primary Key: username
+  - Foreign Key: username (references userlogin.username)
+  - Attributes:
+	  - username (VARCHAR, 20)
+	  - firstname (CHAR, 20)
+	  - lastname (CHAR, 20)
+	  - gender (ENUM: 'Male', 'Female', 'Transgender', 'Others')
+	  - dateofbirth (VARCHAR, 10)
+	  - country (CHAR, 20)
+	  - state (CHAR, 20)
+	  - city (CHAR, 20)
 
 - Table Details: usercontact
-
-- Primary Key: username
-- Foreign Key: username (references userlogin.username)
-- Attributes:
-	- username (VARCHAR, 20)
-	- email (VARCHAR, 40)
-	- icc (ENUM: '+91', '+1', '+44', '+81')
-	- mobileno (INT, 10)
-	- tandc_status (ENUM: 'on', 'off')
-
-                                                                 
+  - Primary Key: username
+  - Foreign Key: username (references userlogin.username)
+  - Attributes:
+	  - username (VARCHAR, 20)
+	  - email (VARCHAR, 40)
+	  - icc (ENUM: '+91', '+1', '+44', '+81')
+	  - mobileno (INT, 10)
+	  - tandc_status (ENUM: 'on', 'off')
 
 ## Technological Stack
 	- CTkMessagebox
