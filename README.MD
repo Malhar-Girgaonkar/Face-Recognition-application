@@ -49,31 +49,70 @@ The application also provides the facility to print the bounding box region in t
 	  - tandc_status (ENUM: 'on', 'off')
 
 ## Technological Stack
-	- CTkMessagebox
-	- customtkinter (and its submodules)
-	- tkinter (and its submodules)
-	- mysql.connector
-	- subprocess
-	- PIL (Image, ImageTk)
-	- cv2 (OpenCV)
-	- os
-	- shutil
-	- importlib
-	- sqlite3
+
+- CTkMessagebox
+- customtkinter (and its submodules)
+- tkinter (and its submodules)
+- mysql.connector
+- subprocess
+- PIL (Image, ImageTk)
+- cv2 (OpenCV)
+- os
+- shutil
+- importlib
+- sqlite3
+
+## Directory structure
+
+- 2-2 project:
+	- app data:
+		- Database:
+			- (stuff related to database and mysql)
+
+			- databasecreatelite.py=(code to create sqlite3 userinfo.db)
+		- Dependencies:
+			- harrcascade_frontalface_default.xml.=(it is the face recognition algorithm i am using)
+
+			- databasedependencies.py=(It is a program that creates required database and table if they do not exist)
+
+			- requirements.py=(It is a program that checks if required modules or packages are installed and if not installs them)
+
+		- icons:
+			- (Icons that can or are used in application)
+
+		- images:
+			- (This directory contains images that you will load to application to do action on)
+
+		- videos:
+			- (This directory contains videos that you will load to application to do action on) 
+
+	- Build:It is a floder created by pyinstaller during creation of exe file
+
+	- Dist:It is created by pyinstaller to store login.py file's executable version
+		- Login.exe=It is the login file's executable version
+
+	- Aboutapp.py=(Contains information about application)
+
+	- ImageFaceRecogniton.py=(Contains code for gui and image based face recognition)
+
+	- Login.py=(It has code for gui and login functionality)
+
+	- mainpage.py=(It has code for gui and mainpage to acess whole applications features)
+
+	- mysqlconn.py=(it has mysql connection features and code snippet to access,create table,delete,truncate,select database)
+
+	- Registration.py=(It has code for gui and Registration functionality)
+
+	- sqlite3conn.py=(It has code to interract with sqlite3 database directly)
+
+	- userinfo.db=(It is the databse i am using in place of mysql and it uses sqlite3)
+
+	- VideoFaceRecogniton.py=(Contains code for gui and Video based face recognition)
+
+	- WebcamFaceRecogniton.py=(Contains code for gui and Webcam based face recognition)
 
 ## Code functioning
-- First we create the dataset from data that we have in two folders for which we have code written in notebook.It splits data into folders as train and validation and each has two categories as AI or Human.
-- Then we visualize data using matplotlib.
-- There is a section to remove dodgy images which i have not used but was made if we create dataset that is cluttered or dirty.
-- Then we start neural network training by importing important functions from `tensorflow`.
-- Then we create training data generator and validation data generator.
-- Then we visualize data in data generators.
-- Implement steps for `EarlyStopping` and `ModelCheckpoint` to help prevent excessive training and save model when we hit a training plateau.
-- Then we create the CNN architecture using `sequential` and gain it's summary.
-- Then we complile model with `Adam` optimizerloss, loss = `binary_crossentropy`, metric = `accuracy`.
-- Then at last we train the model with `model.fit` and save  history.
-- the model ran for 4 epochs and finally had following stats loss: 0.0353, accuracy: 0.9908, val_loss: 0.2212, val_accuracy: 0.9461.
-- Finally we load model and test it on new data in final section.
+- First 
 
 ## License
 This project is licensed under MIT.
