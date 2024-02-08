@@ -26,7 +26,7 @@ The application also provides the facility to print the bounding box region in t
 	- username (VARCHAR, 20)
 	- password (VARCHAR, 20)
 
--Table Details: userpersonal
+- Table Details: userpersonal
 
 - Primary Key: username
 - Foreign Key: username (references userlogin.username)
@@ -40,7 +40,7 @@ The application also provides the facility to print the bounding box region in t
 	- state (CHAR, 20)
 	- city (CHAR, 20)
 
-- able Details: usercontact
+- Table Details: usercontact
 
 - Primary Key: username
 - Foreign Key: username (references userlogin.username)
