@@ -112,7 +112,7 @@ The application also provides the facility to print the bounding box region in t
 	- WebcamFaceRecogniton.py=(Contains code for gui and Webcam based face recognition)
 
 ## Code functioning
-- First 
+- First run the ``
 
 ## License
 This project is licensed under MIT.
