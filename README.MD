@@ -111,30 +111,31 @@ The application also provides the facility to print the bounding box region in t
 
 	- WebcamFaceRecogniton.py=(Contains code for gui and Webcam based face recognition)
 
-## Code functioning
-- First run the ``
+## Code Function
+- First run the `dependency.py` and `requirement.py` to set the database and modules.
+- open the application folder in vscode/cmd or click the .exe file to run it if available.
+- Login page is entry point of application.
+- For first time users register and then login.
+- After login you would be directed to mainpage wherer you can select what input format you want to work with and proceed.
+- In image and video formats for working with respective ddata the selected image/video is stored in application directory in `Appdata/image` or `Appdata/video`.
+- Remember to clear the stored data to avoid use of excessive storage.
+- Use application to recognize face in input.
+- Close application
+
+## Application Images
+
 
 ## License
 This project is licensed under MIT.
 
+
 ## About Author
-Thus code is written by Malhar Girgaonkar of MREC and was made using datase available at kaggle and wiki. I have modified and reduced the scale of data to fit my model needs. This model is trained on a total of 1.87 GB of data that is of following two categories
-- Human made portraits of many kind.
-- Ai made portraits that were available on web.
-
-The model was satisfactory and is used in the author's application called M.U.R.A.L. The model trained is very helpful for artists to get the credit that was stolen from them by the new "Gen AI".
-
-link to M.U.R.A.L :  [M.U.R.A.L](https://github.com/Malhar-Girgaonkar/M.U.R.A.L/tree/master)
+This code is written by Malhar Girgaonkar of MREC and was made using customtkinter, opencv and other relevent modules. This projecct is a gateway into understanding how concepts like DBMS, applications , file storage, github, face recognition work in an application.
 
 ## Contact 
-- Email: [malhargirgaonkarr@gmail.com](mailto:malhargirgaonkarr@gmail.com)
+- Email: [malhargirgaonkar@gmail.com](mailto:malhargirgaonkar@gmail.com)
 - Linkedin : [Malhar Girgaonkar](https://www.linkedin.com/in/malhar-girgaonkar-b9223a28a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - Github : [Malhar Girgankar](https://github.com/Malhar-Girgaonkar)
 
-## Credits
-I would like to give credit to the sources from where i was able to get the datasets that i used in this application.
-- Kaggle : [Kaggle.com](https://www.kaggle.com)
-- Wiki Art dataset :[WikiArt](https://www.kaggle.com/datasets/sivarazadi/wikiart-art-movementsstyles)
-
 ## Contributions
-Contributions to AI_Art_vs_Human_Art are welcome. If you encounter issues or have ideas for improvement, please open an issue or submit a pull request.
+Contributions to Face recognition applications are welcome. If you encounter issues or have ideas for improvement, please open an issue or submit a pull request.
