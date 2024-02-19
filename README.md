@@ -6,6 +6,7 @@ This Project made to help the users identify human face using OpenCC and harrcas
 - Image
 - Video
 - Webcam
+
 The application also provides the facility to print the bounding box region in terminal and also highlights it on the image , video , webcam footage.A person can login and register to the application and these details are stored in a database.For first time users we have code that helps install dependencies and create the database structure.
 
 ## Database Structure:
