@@ -130,8 +130,8 @@ Following application images:
 - Registeration and login.
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201305.png" alt="Registration" width="400" height="300"/>
-  <img src="https://github.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201157.png" alt="Login" width="400" height="300"/>
+  <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201305.png" alt="Registration" width="400" height="300"/>
+  <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201157.png" alt="Login" width="400" height="300"/>
 </div>
 
 - Image and video based face recognition.
