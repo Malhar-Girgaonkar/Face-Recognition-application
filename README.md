@@ -140,7 +140,7 @@ Following application images:
 <div style="display: flex; justify-content: space-between;">
   <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/master/Demo%20Images/Screenshot%202023-09-10%20201056.png" alt="Image Face Recognition" width="400" height="300"/>
   <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/master/Demo%20Images/Screenshot%202023-09-10%20201335.png" alt="Video Face Recognition" width="400" height="300"/>
-</div
+</div>
 
 - Webcam based Image recogniton and Mainpage.
 
