@@ -138,22 +138,22 @@ Following application images:
 - Image and video based face recognition.
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201056.png" alt="Image Face Recognition" width="400" height="300"/>
-  <img src="https://github.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201335.png" alt="Video Face Recognition" width="400" height="300"/>
+  <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201056.png" alt="Image Face Recognition" width="400" height="300"/>
+  <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201335.png" alt="Video Face Recognition" width="400" height="300"/>
 </div>
 
 - Webcam based Image recogniton and Mainpage.
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201400.png" alt="Webcam Face Recognition" width="400" height="300"/>
-  <img src="https://github.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201221.png" alt="Mainpage" width="400" height="300"/>
+  <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201400.png" alt="Webcam Face Recognition" width="400" height="300"/>
+  <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201221.png" alt="Mainpage" width="400" height="300"/>
 </div>
 
 - About Application and Database.
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201431.png" alt="About App" width="400" height="300"/>
-  <img src="https://github.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201624.png" alt="Database" width="400" height="300"/>
+  <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201431.png" alt="About App" width="400" height="300"/>
+  <img src="https://raw.githubusercontent.com/Malhar-Girgaonkar/Face-Recognition-application/blob/master/Demo%20Images/Screenshot%202023-09-10%20201624.png" alt="Database" width="400" height="300"/>
 </div>
 
 ## License
